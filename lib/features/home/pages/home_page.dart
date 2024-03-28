@@ -13,10 +13,12 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.purple,
         title: const Text('Can\'t Wait 🤩'),
       ),
       body: const _HomePageBody(),
       floatingActionButton: FloatingActionButton(
+        backgroundColor: Colors.purple,
         onPressed: () {
           Navigator.of(context).push(
             MaterialPageRoute(
