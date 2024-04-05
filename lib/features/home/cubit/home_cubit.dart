@@ -21,8 +21,8 @@ class HomeCubit extends Cubit<HomeState> {
         final itemModels = items.docs.map(((doc) {
           return ItemModel(
             title: doc['title'],
-            imageURL: doc['imageURL'],
-            relaseDate: (doc['relaseDate'] as Timestamp).toDate(), 
+            imageURL: doc['image_url'],
+            relaseDate: (doc['release_date'] as Timestamp).toDate(), 
             id: doc.id,
           );
         })).toList();

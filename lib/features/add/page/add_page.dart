@@ -38,7 +38,6 @@ class _AddPageState extends State<AddPage> {
           builder: (context, state) {
             return Scaffold(
               appBar: AppBar(
-                backgroundColor: Colors.purple,
                 title: const Text('Add new upcoming title'),
                 actions: [
                   IconButton(
