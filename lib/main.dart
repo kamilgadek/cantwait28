@@ -1,4 +1,4 @@
-import 'package:cantwait28/features/home/pages/home_page.dart';
+import 'package:cantwait28/features/auth/pages/auth.dart';
 import 'package:cantwait28/firebase_options.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
@@ -12,7 +12,7 @@ void main() async {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.purple,
       ),
       debugShowCheckedModeBanner: false,
-      home: const HomePage(),
+      home: const AuthGate(),
     );
   }
 }

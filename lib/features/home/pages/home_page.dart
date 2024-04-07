@@ -8,8 +8,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -36,9 +36,7 @@ class HomePage extends StatelessWidget {
 }
 
 class _HomePageBody extends StatelessWidget {
-  const _HomePageBody({
-    Key? key,
-  }) : super(key: key);
+  const _HomePageBody();
 
   @override
   Widget build(BuildContext context) {
@@ -93,9 +91,8 @@ class _HomePageBody extends StatelessWidget {
 
 class _ListViewItem extends StatelessWidget {
   const _ListViewItem({
-    Key? key,
     required this.itemModel,
-  }) : super(key: key);
+  });
 
   final ItemModel itemModel;
 

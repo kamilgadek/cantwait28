@@ -7,8 +7,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 class DetailsPage extends StatelessWidget {
   const DetailsPage({
-    Key? key, required this.id,
-  }) : super(key: key);
+    super.key, required this.id,
+  });
 
   final String id;
 
@@ -47,9 +47,8 @@ class DetailsPage extends StatelessWidget {
 
 class _ListViewItem extends StatelessWidget {
   const _ListViewItem({
-    Key? key,
     required this.itemModel,
-  }) : super(key: key);
+  });
 
   final ItemModel itemModel;
 
