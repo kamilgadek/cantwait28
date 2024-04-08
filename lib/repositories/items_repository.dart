@@ -4,6 +4,8 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 class ItemsRepository {
   Stream<List<ItemModel>> getItemsStream() {
     return FirebaseFirestore.instance
+        .collection('users')
+        .doc('10S0k3pWuXfIxfWq548czepxXuA3')
         .collection('items')
         .orderBy('release_date')
         .snapshots()
@@ -20,12 +22,21 @@ class ItemsRepository {
   }
 
   Future<void> delete({required String id}) {
-    return FirebaseFirestore.instance.collection('items').doc(id).delete();
+    return FirebaseFirestore.instance
+        .collection('users')
+        .doc('10S0k3pWuXfIxfWq548czepxXuA3')
+        .collection('items')
+        .doc(id)
+        .delete();
   }
 
   Future<ItemModel> get({required String id}) async {
-    final doc =
-        await FirebaseFirestore.instance.collection('items').doc(id).get();
+    final doc = await FirebaseFirestore.instance
+        .collection('users')
+        .doc('10S0k3pWuXfIxfWq548czepxXuA3')
+        .collection('items')
+        .doc(id)
+        .get();
     return ItemModel(
       title: doc['title'],
       imageURL: doc['image_url'],
@@ -40,7 +51,11 @@ class ItemsRepository {
     DateTime releaseDate,
   ) async {
     {
-      await FirebaseFirestore.instance.collection('items').add(
+      await FirebaseFirestore.instance
+          .collection('users')
+          .doc('10S0k3pWuXfIxfWq548czepxXuA3')
+          .collection('items')
+          .add(
         {
           'title': title,
           'image_url': imageURL,
